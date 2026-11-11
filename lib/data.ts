@@ -61,3 +61,7 @@ export const FAQ = [
 export const TESTIMONIALS = [
   { name: "Ad Soyad", role: "Firma sahibi, Firma Adı", text: "Gerçek müşteri yorumunu buraya yazın.", stars: 5 },
 ];
+
+/* Paket ödemesi için IBAN bilgisi: hesap sayfasında gösterilir. Boş bırakırsanız e-posta adresi gösterilir. */
+export const IBAN = "";        // TODO: örn. "TR00 0000 0000 0000 0000 0000 00"
+export const IBAN_SAHIBI = ""; // TODO: hesap sahibi adı

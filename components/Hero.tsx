@@ -1,5 +1,5 @@
 import { ArrowRight, PlayCircle, Check } from "lucide-react";
-import { APP_URL } from "@/lib/data";
+import Link from "next/link";
 
 const ROWS = [
   { n: "Yılmaz Gıda", t: "Nakit", a: "12.500,00" },
@@ -21,9 +21,9 @@ export default function Hero() {
           Makbuzu kesin, WhatsApp veya e-postayla gönderin. Plasiyerlerinizin tahsilatları gün sonunda ana hesabınıza geçsin; cari, çek ve senet kayıtları düzenli kalsın.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a href={APP_URL} className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-mint px-7 font-bold text-obsidian shadow-[0_10px_40px_-8px_rgba(45,212,191,.7)] transition hover:brightness-110">
+          <Link href="/kayit/" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-mint px-7 font-bold text-obsidian shadow-[0_10px_40px_-8px_rgba(45,212,191,.7)] transition hover:brightness-110">
             Ücretsiz Başla <ArrowRight size={18} aria-hidden />
-          </a>
+          </Link>
           <a href="#nasil" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-white/15 px-7 font-semibold transition hover:border-mint/50 hover:text-mint">
             <PlayCircle size={18} aria-hidden /> Demosunu İncele
           </a>

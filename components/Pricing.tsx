@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { Check } from "lucide-react";
-import { APP_URL, CONTACT_EMAIL, PLANS } from "@/lib/data";
+import Link from "next/link";
+import { CONTACT_EMAIL, PLANS } from "@/lib/data";
 
 export default function Pricing() {
   const [yearly, setYearly] = useState(false);
@@ -33,7 +34,7 @@ export default function Pricing() {
             <ul className="mt-6 flex-1 space-y-3 text-sm">
               {p.features.map((f) => (<li key={f} className="flex gap-2"><Check size={18} className="mt-0.5 shrink-0 text-mint" aria-hidden />{f}</li>))}
             </ul>
-            <a href={p.monthly === null ? `mailto:${CONTACT_EMAIL}` : APP_URL} className={`mt-7 flex min-h-12 items-center justify-center rounded-xl font-bold transition ${p.popular ? "bg-mint text-obsidian hover:brightness-110" : "border border-white/15 hover:border-mint/50 hover:text-mint"}`}>{p.cta}</a>
+            <Link href={p.monthly === null ? `mailto:${CONTACT_EMAIL}` : "/kayit/"} className={`mt-7 flex min-h-12 items-center justify-center rounded-xl font-bold transition ${p.popular ? "bg-mint text-obsidian hover:brightness-110" : "border border-white/15 hover:border-mint/50 hover:text-mint"}`}>{p.cta}</Link>
           </article>
         ))}
       </div>
